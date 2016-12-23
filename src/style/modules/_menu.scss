@@ -1,0 +1,56 @@
+.menu{
+	margin: 0;
+	padding: 0;
+	&__item{
+		list-style-type: none;
+		display: inline-block;
+	}
+	&__link{
+		text-decoration: none;
+		color: $colorLight;
+		display: block;
+		font-size: rem(18px);
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
+.menu--active{
+	.menu__text{
+		position: relative;
+		padding-bottom: em(23px);
+		&:after{
+			display: block;
+			transition: opacity .1s;
+			content: '';
+			height: rem(3px);
+			width: 100%;
+			position: absolute;
+			background-color: $colorMain;
+			bottom: 0;
+		}
+	}
+}
+
+@include apply-to($tablet,max){
+	.menu--active .menu__text{
+		&:after{
+			display: none;
+		}
+	}
+
+	.menu--active{
+		position: relative;
+		.menu__line{
+			display: block;
+			transition: opacity .1s;
+			content: '';
+			height: rem(3px);
+			width: calc(100% - #{rem(31px)});
+			position: absolute;
+			background-color: $colorMain;
+			bottom: -2px;
+		}
+
+	}
+}

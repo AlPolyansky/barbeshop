@@ -1,0 +1,22 @@
+.login{
+	text-align: right;
+	&__ico{
+		display: inline-block;
+		width: rem(16px);
+		height: rem(16px);
+		vertical-align: middle;
+		position: absolute;
+		top: em(1px);
+		left: em(-31px);
+	}
+	&__link{
+		display: inline-block;
+		vertical-align: middle;
+		color: $colorLight;
+		text-decoration: none;
+		font-size: rem(18px);
+		text-transform: uppercase;
+		font-weight: 700;
+		position: relative;
+	}
+}

@@ -1,0 +1,14 @@
+.logo{
+	width: rem(370px);
+	min-height: rem(154px);
+	background-image: url("../img/logo-big.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	@include apply-to($tablet,max){
+		background-image: url("../img/logo-medium.svg");
+	}
+	@include apply-to($phone,max){
+		background-image: url("../img/logo-small.svg");
+	}
+}
