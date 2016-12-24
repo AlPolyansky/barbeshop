@@ -1,0 +1,51 @@
+.social{
+	text-align: center;
+	font-size: rem(18px);
+	&__title{
+		margin-bottom: rem(14px);
+		@include apply-to($tablet,max){
+			display: none;
+		}
+	}
+	&__list{
+		margin: 0;
+		padding: 0;
+		@include apply-to($tablet,max){
+			font-size: 0;
+		}
+	}
+	&__item{
+		list-style-type: none;
+		display: inline-block;
+		padding: 0 em(2px);
+		@include apply-to($tablet,max){
+			width: 33.33333%;
+			padding: 0;
+		}
+	}
+	&__link{
+		width: rem(49px);
+		height: rem(49px);
+		display: block;
+		border: 1px solid rgba($colorLight,.1);
+		position: relative;
+		&:hover{
+			border: 1px solid rgba($colorLight,1);
+		}
+		&:active{
+			border-color: transparent;
+			.social__ico{
+				opacity: .3;
+			}
+			background-color: lighten(saturate(adjust-hue($colorDark, 0.0000), 0.0000), 0.3922);
+		}
+		@include apply-to($tablet,max){
+			width: 100%;
+			height: rem(99px);
+			//padding: 0;
+		}
+	}
+	&__ico{
+		@include center();
+	}
+}

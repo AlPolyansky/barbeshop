@@ -1,0 +1,30 @@
+.copy{
+	font-size: rem(18px);
+	text-align: center;
+	float: right;
+	max-width: rem(161px);
+	@include apply-to($phone,max){
+		max-width: 100%;
+		float: none;
+	}
+	&__title{
+		margin-bottom: rem(14px);
+	}
+	&__link{
+		text-decoration: none;
+		color: $colorLight;
+		display: inline-block;
+		font-weight: 700;
+		border: 1px solid rgba($colorLight,.1);
+		padding: em(12px) em(23px);
+		width: 100%;
+		&:hover{
+			border: 1px solid rgba($colorLight,1);
+		}
+		&:active{
+			border-color: transparent;
+			color: rgba($colorLight,.1);
+			background-color: lighten(saturate(adjust-hue($colorDark, 0.0000), 0.0000), 0.3922);
+		}
+	}
+}

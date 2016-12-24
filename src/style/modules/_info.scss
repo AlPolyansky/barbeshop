@@ -1,0 +1,37 @@
+.info{
+	font-size: rem(18px);
+	&__title{
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: em(14px);
+		@include apply-to($phone,max){
+			font-size: rem(16px);
+			margin-bottom: em(17px);
+		}
+	}
+	&__pos{
+		letter-spacing: -0.02px;
+		margin-bottom: rem(7px);
+		@include apply-to($phone,max){
+			line-height: em(22px);
+			margin-bottom: rem(20px);
+		}
+	}
+	&__phone{
+		
+		@include apply-to($phone,max){
+			padding: em(12px) 0;
+			border: 1px solid rgba($colorLight,.1);
+		}
+	}
+	&__text{
+		@include apply-to($phone,max){
+			display: none;
+		}
+	}
+	&__number{
+		@include apply-to($phone,max){
+			font-weight: 700;
+		}
+	}
+}
