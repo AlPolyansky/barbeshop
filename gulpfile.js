@@ -130,6 +130,7 @@ var sassCompile = [
 // Тут пишем пути к модулям js, чтобы они превратились в единый файл app.js (название файла береться из конфига)
 // Важен порядок файлов
 var mainJs = [
+  path.sourse.folder + '/' + path.sourse.js + '/modules/_menu.js',
   path.sourse.folder + '/' + path.sourse.js + '/app.js',
 ];
 

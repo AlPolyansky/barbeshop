@@ -1,5 +1,6 @@
 .login{
 	text-align: right;
+	@include line();
 	&__ico{
 		display: inline-block;
 		width: rem(16px);

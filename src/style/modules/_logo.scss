@@ -10,5 +10,7 @@
 	}
 	@include apply-to($phone,max){
 		background-image: url("../img/logo-small.svg");
+		width: rem(327px);
+		min-height: rem(30px);
 	}
 }
