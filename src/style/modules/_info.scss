@@ -32,6 +32,7 @@
 	&__number{
 		@include apply-to($phone,max){
 			font-weight: 700;
+
 		}
 	}
 }

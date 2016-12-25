@@ -1,0 +1,10 @@
+.s-info{
+	background-color: lighten(saturate(adjust-hue($colorDark, 0.0000), 0.0000), 6.6667);
+	&__share{
+		height: 100%;
+		transform: translate(0,-50%);
+		@include apply-to($tablet,max){
+			transform: translate(0,0);
+		}
+	}
+}
