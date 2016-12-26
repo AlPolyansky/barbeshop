@@ -95,6 +95,7 @@ var path = {
 var scssLibs = [
   // Пример:  path.sourse.folder + '/normalize.css/normalize.css',
   path.sourse.libs + '/normalize.css/normalize.css',
+  'node_modules/flickity/dist/flickity.min.css',
 ];
 
 
@@ -105,6 +106,7 @@ var jsLibs = [
   // Пример:  path.sourse.folder + '/jquery/dist/jquery.js',
   path.sourse.libs + '/jquery/dist/jquery.min.js',
   path.sourse.libs + '/svg4everybody/dist/svg4everybody.js',
+  'node_modules/flickity/dist/flickity.pkgd.min.js'
 ];
 
 
@@ -130,7 +132,9 @@ var sassCompile = [
 // Тут пишем пути к модулям js, чтобы они превратились в единый файл app.js (название файла береться из конфига)
 // Важен порядок файлов
 var mainJs = [
+  path.sourse.folder + '/' + path.sourse.js + '/modules/_common.js',
   path.sourse.folder + '/' + path.sourse.js + '/modules/_menu.js',
+  path.sourse.folder + '/' + path.sourse.js + '/modules/_slider.js',
   path.sourse.folder + '/' + path.sourse.js + '/app.js',
 ];
 

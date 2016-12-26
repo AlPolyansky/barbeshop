@@ -1,0 +1,38 @@
+.flag{
+	background-color: $colorBase;
+	width: rem(50px);
+	height: rem(60px);
+	text-align: center;
+	font-size: rem(30px);
+	color: $colorLight;
+	position: relative;
+	display: block;
+	padding-top: rem(2px);
+	&__number{
+		font-weight: 700;
+	}
+	&__text{
+		position: relative;
+		top: rem(-6px);
+		display: block;
+		font-size: rem(16px);
+	}
+	&:after,&:before{
+		content: '';
+		display: block;
+		width: 0;
+		height: 0;
+		position: absolute;
+		bottom: 0;
+		border-bottom: 10px solid $colorBody;
+	}
+	&:after{
+		border-right: 25px solid transparent;
+		left: 0;
+	}
+	&:before{
+		right: 0;
+		border-left: 25px solid transparent;	
+	}
+	
+}

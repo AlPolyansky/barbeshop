@@ -1,0 +1,51 @@
+$active-color : darken(saturate(adjust-hue($colorMain, -0.0000), 7.0547), 9.4118);
+
+.news{
+	position: relative;
+	display: block;
+	text-decoration: none;
+	color: $colorBase;
+	padding-right: rem(30px);
+	&__part{
+		&:first-child{
+			position: absolute;
+			top: rem(11px);
+			left: 0;
+		}
+		&:last-child{
+			margin-left: rem(70px);
+		}
+	}
+	&__text{
+		font-size: rem(18px);
+		line-height: em(25px);
+	}
+}
+
+
+.news:hover{
+	color: $colorMain;
+	.flag{
+		background-color: $colorMain;
+		&:after{
+			border-top-color: $colorMain;
+		}
+	}
+	.news__text{
+		color: $colorMain;
+		text-decoration: underline;
+	}
+}
+
+.news:active{
+	.flag{
+		color: rgba($colorLight,.3);
+		background-color: $active-color;
+		&:after{
+			border-top-color: $active-color;
+		}
+	}
+	.news__text{
+		color: $active-color;
+	}
+}

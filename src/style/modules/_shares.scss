@@ -17,44 +17,63 @@ $triangle-size : 23px;
 	display: flex;
 	@include apply-to($tablet,max){
 		display: block;
-		//flex-wrap: wrap;
+	}
+	@include apply-to($phone,max){
+		transform: none!important;
+
 	}
 	&__desk{
 		@include col(4);
 		background-color: $colorLight;
-		position: relative;
+		//position: relative;
 		padding: rem(27px) rem(54px) 0 rem(41px);
-		//display: table-cell;
-		//display: flex;
-		//flex-wrap: wrap;
 		@include apply-to($tablet,max){
 			@include clear();
 			@include col(12);
-			padding-bottom: rem(31px);
+			padding-bottom: rem(12px);
+			padding-top: rem(27px);
+		}
+		@include apply-to($phone,max){
+			padding-bottom: rem(29px);
 		}
 	}
 	&__container{
 		@include apply-to($tablet,max){
 			@include col(6);
 			&:nth-child(1){
-				//order: 1;
 				padding-left: rem(41px);
 				padding-right: rem(41px);
 
 			}
 			&:nth-child(2){
-				//order: 2;
 				padding-top: rem(9px);
 				padding-left: rem(32px);
 			}
 			&:nth-child(3){
 				max-width: 50%;
 				float: none;
-				//position: absolute;
 				padding-left: rem(41px);
-				//padding-right: rem(41px);
-				//bottom: 10%;
-				//order: 3;
+			}
+		}
+		@include apply-to($phone,max){
+			width: 100%;
+			max-width: rem(280px);
+			float: none;
+			margin: 0 auto;
+			&:nth-child(1){
+				//padding: 0 rem(65px);
+				margin-bottom: rem(15px);
+
+			}
+			&:nth-child(2){
+				padding: 0;
+
+			}
+			&:nth-child(3){
+				padding-left: 0;
+				text-align: center;
+				margin-bottom: rem(0px);
+				max-width: 100%;
 			}
 		}
 	}
@@ -67,6 +86,12 @@ $triangle-size : 23px;
 			max-width: rem(320px);
 			margin-bottom: em(7px);
 		}
+		@include apply-to($phone,max){
+			text-align: center;
+			text-transform: uppercase;
+			font-size: rem(30px);
+			margin: 0 auto;
+		}
 	}
 	&__info{
 		font-size: rem(20px);
@@ -75,18 +100,23 @@ $triangle-size : 23px;
 		max-width: rem(209px);
 		@include apply-to($tablet,max){
 			margin-bottom: 0;
-			//@include col(6);
+		}
+		@include apply-to($phone,max){
+			text-align: center;
+			max-width: 100%;
 		}
 	}
 	&__extra{
 		font-size: rem(20px);
 		opacity: .3;
 		margin-bottom: rem(20px);
-		@include apply-to($tablet,max){
-			//@include push(12);
-			//@include col(6);
-			//position: relative;
-			//left: -100%;
+		@include apply-to($phone,max){
+			//display: none;
+			position: absolute;
+			bottom: rem(-56px);
+			color: rgba($colorLight,.3);
+			width: 100%;
+			max-width: 100%;
 		}
 	}
 	&:before{
@@ -102,7 +132,9 @@ $triangle-size : 23px;
 		@include apply-to($tablet,max){
 			top: rem(41px);
 		}
-
+		@include apply-to($phone,max){
+			display: none;
+		}
 	}
 }
 
@@ -136,13 +168,35 @@ $triangle-size : 23px;
 		&:nth-child(-4n+7){
 			background-color: lighten(saturate(adjust-hue($colorDark, 0.0000), 0.0000), 6.6667);
 		}
+		@include apply-to($phone,max){
+			@include col(12);
+			padding: rem(16px) rem(20px) rem(13px) rem(20px);
+		}
 	}
 	&-number{
 		font-size: rem(72px);
 		font-weight: 700;
 		margin-bottom: em(1px);
+		@include apply-to($phone,max){
+			@include col(8);
+			font-size: rem(40px);
+		}
 	}
 	&-text{
 		font-size: em(20px);
+		@include apply-to($phone,max){
+			font-size: em(18px);
+			text-align: right;
+			@include col(4);
+			float: right;
+			//max-width: 110px;
+		}
+	}
+	&-wrap{
+		@include apply-to($phone,max){
+			max-width: rem(280px);
+			width: 100%;
+			margin: 0	auto;
+		}
 	}
 }

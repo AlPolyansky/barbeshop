@@ -1,0 +1,30 @@
+.s-news{
+	padding-top: rem(52px);
+	padding-bottom: rem(35px);
+	border-bottom: 1px solid $colorButton;
+	&__container{
+		position: relative;
+	}
+	&__title{
+		margin-bottom: em(20px);
+		max-width: 70%;
+		width: 100%;
+		margin-left: rem(70px);
+	}
+	&__button{
+		top: 0;
+		right: 0;
+		position: absolute;
+	}
+	&__list{
+		margin: 0;
+		padding: 0;
+		@include clear();
+	}
+	&__item{
+		list-style-type: none;
+		@include col(4);
+	}
+}
+
+

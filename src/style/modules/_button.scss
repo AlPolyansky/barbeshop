@@ -1,0 +1,18 @@
+.button{
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: rem(18px);
+	padding: em(12px) em(26px);
+	display: inline-block;
+	font-weight: 700;
+}
+
+.button--transparent{
+	color: $colorBase;
+	background-color: transparent;
+	border: 1px solid $colorButton;
+	&:active{
+		background-color: $colorButton;
+		color: rgba($colorBase,.3);
+	}
+}

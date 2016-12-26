@@ -41,7 +41,7 @@ $button-width: 70px;
 
 	}
 	&__text{
-		vertical-align: middle;
+		//vertical-align: middle;
 	}
 	&__title{
 		color: $colorLight;
@@ -98,6 +98,7 @@ $button-width: 70px;
 			position: absolute;
 			background-color: $colorMain;
 			bottom: 0;
+			left: 0;
 		}
 	}
 }

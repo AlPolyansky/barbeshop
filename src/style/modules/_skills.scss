@@ -1,0 +1,164 @@
+.skills{
+	color: $colorLight;
+	text-align: center;
+	padding-top: rem(238px);
+	@include apply-to($tablet,max){
+		padding-top: rem(358px);
+	}
+	@include apply-to($phone,max){
+		padding-top: rem(577px);
+	}
+	&__list{
+		@include clear();
+		margin: 0;
+		padding: 0;
+		margin-bottom: rem(45px);
+		@include apply-to($tablet,max){
+			margin-bottom: rem(11px);
+		}
+		@include apply-to($phone,max){
+			margin-bottom: rem(45px);
+		}
+	}
+	&__item{
+		@include col(4);
+		list-style-type: none;
+		padding: 0 rem(42px);
+		position: relative;
+		&:after{
+			content: '';
+			display: block;
+			position: relative;
+			height: 99%;
+			width: 1px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: rgba($colorLight,.1);
+		}
+		&:nth-child(3n+3){
+			&:after{
+				display: none;
+			}
+		}
+		@include apply-to($tablet,max){
+			@include col(12);
+			margin-bottom: rem(38px);
+			padding-bottom: rem(17px);
+			&:after{
+				bottom: 0;
+				top: auto;
+				width: 89%;
+				left: rem(26px);
+				height: 1px;
+			}
+		}
+		@include apply-to($phone,max){
+			padding-bottom: rem(8px);
+			&:after{
+				display: none;
+			}
+		}
+	}
+	&__ico-wrap{
+		height: rem(94px);
+		margin: 0 auto;
+		margin-bottom: rem(27px);
+		width: 100%;
+		@include apply-to($tablet,max){
+			@include col(3);
+		}
+		@include apply-to($phone,max){
+			@include col(12);
+			margin-bottom: rem(34px);
+		}
+	}
+	&__ico{
+		fill: $colorMain;
+		height: 100%;
+		width: 100%;
+		@include apply-to($tablet,max){
+			position: relative;
+			top: rem(6px);
+		}
+	}
+	&__content{
+		@include apply-to($tablet,max){
+			text-align: left;
+			@include col(9);
+			padding-right: rem(28px);
+		}
+		@include apply-to($phone,max){
+			text-align: center;
+			@include col(12);
+			padding: 0 rem(20px);
+		}
+	}
+	&__title{
+		font-size: rem(30px);
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+		margin-bottom: em(8px);
+	}
+	&__text{
+		font-size: rem(20px);
+		padding: 0;
+		margin: 0;
+		line-height: em(20px);
+	}
+	&__triangle{
+		height: rem(66px);
+		width: 100%;
+		fill: darken(saturate(adjust-hue($colorLight, 30.0000), 30.0000), 3.9216);
+		position: relative;
+		bottom: rem(-3px);
+		@include apply-to($tablet,max){
+			position: absolute;
+			bottom: 0;
+			height: rem(41px);
+		}
+		@include apply-to($phone,max){
+			height: rem(35px);
+		}
+	}
+
+}
+
+.flickity-page-dots {
+  bottom: 0;
+  z-index: 100;
+}
+
+.flickity-page-dots .dot {
+  width: 8px;
+  height: 8px;
+  opacity: 1;
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid $colorLight;
+  transform: rotate(45deg);
+  margin: 0 rem(12px);
+}
+.flickity-page-dots .is-selected{
+	background: $colorLight;
+}
+
+.js-skills-slider{
+	display: none;
+	@include apply-to($phone,max){
+		display: block;
+	}
+}
+
+.flickity-viewport {
+  transition: height 0.2s;
+}
+
+.i-chair{
+	height: rem(89px);
+}
+
+.i-column{
+	height: rem(91px);
+}

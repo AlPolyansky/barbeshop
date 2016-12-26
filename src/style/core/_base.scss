@@ -15,6 +15,10 @@ $colorLight : #fff;
 $colorBase: #000000;
 $colorDark: #242424;
 $colorMain: #826550;
+$colorButton : #e5ddd5;
+$colorBody : darken(saturate(adjust-hue($colorLight, 30.0000), 30.0000), 3.9216);
+
+
 
 
 html,body{
@@ -24,6 +28,20 @@ html,body{
 	font-family: $fontMain; 
 	margin: 0;
 	font-weight: 400;
+}
+
+/* html{
+	overflow:hidden;
+	height:100%;
+}
+body {overflow-y:scroll; height:100%;} */
+
+body{
+	background-color: $colorBody;
+}
+
+::selection {
+	background: lighten(#826550,20%); 
 }
 
 .container{

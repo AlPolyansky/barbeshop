@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-	//commonModule.init();
+	commonModule.init();
 	menuModule.init();
+	sliderModule.init();
 
 });

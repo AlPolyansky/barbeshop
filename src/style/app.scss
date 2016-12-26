@@ -5,18 +5,28 @@
 
 @import 'core/_base.scss';
 
-// blocks
 
-@import 'blocks/_header.scss';
-@import 'blocks/_footer.scss';
-@import 'blocks/_s-info.scss';
 
 // modules
 
 @import 'modules/_menu.scss';
+@import 'modules/_title.scss';
 @import 'modules/_login.scss';
 @import 'modules/_logo.scss';
 @import 'modules/_info.scss';
 @import 'modules/_social.scss';
 @import 'modules/_copy.scss';
 @import 'modules/_shares.scss';
+@import 'modules/_skills.scss';
+@import 'modules/_button.scss';
+@import 'modules/_flag.scss';
+@import 'modules/_news.scss';
+
+// blocks
+
+@import 'blocks/_header.scss';
+@import 'blocks/_footer.scss';
+@import 'blocks/_section.scss';
+@import 'blocks/_s-info.scss';
+@import 'blocks/_s-news.scss';
+
