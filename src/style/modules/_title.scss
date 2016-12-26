@@ -6,4 +6,7 @@
 
 .title--size-l{
 	font-size: rem(40px);
+	@include apply-to($phone,max){
+		font-size: rem(30px);
+	}
 }

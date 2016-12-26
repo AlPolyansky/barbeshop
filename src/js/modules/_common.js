@@ -15,6 +15,20 @@ var commonModule = (function() {
 		}
 
 
+		var textCutter = function(){
+			
+			var $elemets = $('[data-length]');
+			$.each($elemets,function(){
+				var $this = $(this);
+				var limit = $this.data().length;
+				var str = $this.text();
+				var newStr = str.slice(0,limit);
+				$this.text(newStr);
+			})
+			
+		}
+
+
 		var _setUpListener = function(){
 
 			// desk fix
@@ -35,7 +49,7 @@ var commonModule = (function() {
 			})
 
 
-			
+			textCutter();
 			
 			
 

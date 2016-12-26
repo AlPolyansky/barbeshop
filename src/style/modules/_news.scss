@@ -6,6 +6,9 @@ $active-color : darken(saturate(adjust-hue($colorMain, -0.0000), 7.0547), 9.4118
 	text-decoration: none;
 	color: $colorBase;
 	padding-right: rem(30px);
+	@include apply-to($phone,max){
+		padding-right: 0;
+	}
 	&__part{
 		&:first-child{
 			position: absolute;

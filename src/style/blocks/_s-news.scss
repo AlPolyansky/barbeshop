@@ -1,7 +1,13 @@
 .s-news{
 	padding-top: rem(52px);
-	padding-bottom: rem(35px);
 	border-bottom: 1px solid $colorButton;
+	@include apply-to($tablet,max){
+		padding-top: rem(42px);
+	}
+	@include apply-to($phone,max){
+		padding-top: rem(31px);
+		padding-bottom: rem(28px);
+	}
 	&__container{
 		position: relative;
 	}
@@ -10,20 +16,65 @@
 		max-width: 70%;
 		width: 100%;
 		margin-left: rem(70px);
+		@include apply-to($tablet,max){
+			margin-left: 0px;
+		}
+		@include apply-to($phone,max){
+			max-width: 100%;
+			text-align: center;
+			margin-bottom: em(14px);
+		}
 	}
 	&__button{
 		top: 0;
 		right: 0;
 		position: absolute;
+		@include apply-to($phone,max){
+			top: auto;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+		}
 	}
 	&__list{
 		margin: 0;
 		padding: 0;
 		@include clear();
+		@include apply-to($phone,max){
+			margin-bottom: rem(37px);
+		}
 	}
 	&__item{
 		list-style-type: none;
 		@include col(4);
+		margin-bottom: rem(35px);
+		display: none;
+		@include apply-to(1200px){
+			&:nth-child(-n+3){
+				display: block;
+			}
+		}
+		@include apply-to($tablet,max){
+			margin-bottom: rem(31px);
+			&:nth-child(-n+2){
+				display: block;
+				@include col(6);
+			}
+		}
+		@include apply-to($phone,max){
+			margin-bottom: rem(17px);
+			padding-bottom: rem(14px);
+			border-bottom: 1px solid $colorButton;
+			&:nth-child(2){
+				border-bottom: 0;
+			}
+			&:last-child{
+				border-bottom: 0;
+			}
+			&:nth-child(1n){
+				@include col(12);
+			}
+		}
 	}
 }
 

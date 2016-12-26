@@ -16,6 +16,7 @@
 		top: rem(-6px);
 		display: block;
 		font-size: rem(16px);
+		text-overflow: clip;
 	}
 	&:after,&:before{
 		content: '';
