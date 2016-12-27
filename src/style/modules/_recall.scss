@@ -1,0 +1,109 @@
+.recall{
+	&__list{
+		margin: 0;
+		padding: 0;
+		position: relative;
+		min-height: rem(160px);
+	}
+	&__item{
+		list-style-type: none;
+		width: 100%;
+	}
+	&__content{
+		border: 1px solid $colorButton;
+		@include clear();
+		max-width: rem(818px);
+		margin: 0 auto;
+		@include apply-to($tablet,max){
+			padding: 0 rem(49px);
+		}
+		@include apply-to($phone,max){
+			padding: 0;
+			border: none;
+		}
+	}
+	&__img-wrap{
+		@include col(3);
+		max-width: rem(247px);
+		max-height: rem(159px);
+		position: relative;
+	}
+	&__img{
+		width: 100%;
+	}
+	&__description{
+		@include col(9);
+		padding: rem(30px) rem(70px) 0 rem(70px);
+		max-width: calc(100% - #{rem(247px)});
+		font-size: rem(18px);
+		@include apply-to($tablet,max){
+			padding-left: 0;
+			padding-right: rem(20px);
+			padding-bottom: rem(33px);
+			max-width: calc(100% - #{rem(141px)});
+		}
+		@include apply-to($phone,max){
+			@include col(9);
+			padding-top: 0;
+			padding-left: rem(24px);
+			padding-right: 0;
+		}
+	}
+	&__title{
+		margin: 0;
+		font-size: rem(24px);
+		margin-bottom: em(9px);
+	}
+	&__text{
+		margin: 0;
+		line-height: em(23px);
+	}
+}
+
+@include apply-to($tablet,max){
+	.recall{
+		&__img-wrap{
+			max-width: rem(141px);
+			height: rem(160px);
+		}
+		&__img{
+			width: 155%;
+			position: relative;
+			top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+		}
+		&__avatar{
+			width: rem(80px);
+			height: rem(80px);
+			border-radius: 50%;
+			overflow: hidden;
+			top: 50%;
+			position: absolute;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+		}
+	}
+}
+
+
+@include apply-to($phone,max){
+	.recall{
+		&__img-wrap{
+			@include col(2);
+			top: rem(11px);
+
+		}
+		&__img{
+			
+		}
+		&__avatar{
+			border-radius: 0;
+			border: 1px solid $colorButton;
+			position: static;
+			transform: none;
+			width: rem(50px);
+			height: rem(48px);
+		}
+	}
+}

@@ -1,0 +1,35 @@
+.s-recall{
+	padding-top: rem(38px);
+	padding-bottom: rem(97px);
+	position: relative;
+	@include apply-to($tablet,max){
+		padding-bottom: rem(72px);
+	}
+	@include apply-to($phone,max){
+		padding-top: rem(24px);
+		//padding-bottom: rem(72px);
+	}
+	&__container{
+		position: relative;
+	}
+	&__button{
+		padding-left: em(21px);
+		padding-right: em(21px);
+		@include apply-to($phone,max){
+			display: none;
+		}
+	}
+	&__title{
+		margin-bottom: rem(39px);
+		@include apply-to($phone,max){
+			margin-bottom: rem(27px);
+		}
+	}
+	&__triangle{
+		display: none;
+		@include apply-to($phone,max){
+			display: block;
+			fill: lighten(saturate(adjust-hue($colorDark, 0.0000), 0.0000), 1.9608);
+		}
+	}
+}

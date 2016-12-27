@@ -125,35 +125,8 @@
 
 }
 
-.flickity-page-dots {
-  bottom: 0;
-  z-index: 100;
-}
 
-.flickity-page-dots .dot {
-  width: 8px;
-  height: 8px;
-  opacity: 1;
-  border-radius: 0;
-  background: transparent;
-  border: 1px solid $colorLight;
-  transform: rotate(45deg);
-  margin: 0 rem(12px);
-}
-.flickity-page-dots .is-selected{
-	background: $colorLight;
-}
 
-.js-skills-slider{
-	display: none;
-	@include apply-to($phone,max){
-		display: block;
-	}
-}
-
-.flickity-viewport {
-  transition: height 0.2s;
-}
 
 .i-chair{
 	height: rem(89px);
@@ -162,3 +135,4 @@
 .i-column{
 	height: rem(91px);
 }
+

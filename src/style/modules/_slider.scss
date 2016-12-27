@@ -1,0 +1,108 @@
+.flickity-viewport {
+	transition: height 0.2s;
+}
+
+.flickity-page-dots .dot {
+  width: 8px;
+  height: 8px;
+  opacity: 1;
+  border-radius: 0;
+  background: transparent;
+  transform: rotate(45deg);
+  margin: 0 rem(12px);
+}
+
+
+.skills{
+	.flickity-page-dots {
+	  bottom: 0;
+	  z-index: 100;
+	}
+
+	.flickity-page-dots .dot {
+		border: 1px solid $colorLight;
+	}
+
+
+	.flickity-page-dots .is-selected{
+		background: $colorLight;
+	}
+}
+
+.recall{
+	.flickity-page-dots {
+		bottom: rem(-52px);
+		@include apply-to($tablet,max){
+			bottom: rem(-5px);
+			display: inline-block;
+			width: auto;
+			background-color: $colorBody;
+			left: 50%;
+			transform: translate(-50%);
+		}
+		@include apply-to($phone,max){
+			bottom: rem(-28px);
+			background-color: transparent;
+		}
+	}
+
+	.flickity-page-dots .is-selected{
+		background: $colorBase;
+	}
+	.flickity-page-dots .dot {
+		border: 1px solid $colorBase;
+	}
+	.flickity-prev-next-button{
+		border: 1px solid $colorButton;
+		border-radius: 0;
+		background-color: $colorBody;
+		height: 100%;
+		max-width: auto;
+		width: rem(49px);
+		top: 0;
+		transform: none;
+		opacity: 1;
+		&:after{
+			@include center();
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			border-top: 6px solid transparent;
+			border-bottom: 6px solid transparent;
+		}
+		svg{
+			display: none;
+		}
+		&:active{
+			background-color: $colorButton;
+		}
+		@include apply-to($phone,max){
+			display: none;
+		}
+	}
+
+	.previous{
+		left: 0;
+		&:after{
+			border-right: 12px solid $colorBase;
+		}
+		&:active{
+			&:after{
+				border-right-color: rgba($colorBase,.3);
+			}
+		}
+	}
+
+	.next{
+		right: 0;
+		&:after{
+			border-left: 12px solid $colorBase;
+		}
+		&:active{
+			&:after{
+				border-left-color: rgba($colorBase,.3);
+			}
+		}
+	}
+}

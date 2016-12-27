@@ -23,6 +23,16 @@ var sliderModule = (function() {
 			}
 		}
 
+
+		$('.recall__list').flickity({
+				cellAlign: 'left',
+  			//contain: true,
+  			adaptiveHeight: true,
+  			prevNextButtons: true,
+  			//setGallerySize: false
+  			//autoPlay: true
+  			//groupCells: true
+			})
 		
 
 
