@@ -23,6 +23,7 @@
 		}
 	}
 	&__triangle{
+		display: none;
 		@include apply-to($phone,max){
 			display: block;
 			height: rem(34px);

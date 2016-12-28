@@ -2,7 +2,7 @@
 	background-color: lighten(saturate(adjust-hue($colorDark, 0.0000), 0.0000), 1.9608);
 	color: $colorLight;
 	@include clear();
-	padding-top: rem(53px);
+	padding-top: rem(38px);
 	padding-bottom: rem(60px);
 	&__part{
 		
@@ -18,6 +18,11 @@
 			@include col(4);
 			@include push(4);
 		}
+	}
+}
+#welcome-page{
+	.footer{
+		padding-top: rem(53px);
 	}
 }
 
