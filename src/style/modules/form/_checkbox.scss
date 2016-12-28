@@ -1,0 +1,43 @@
+$chexbox-size: 35px;
+.checkbox{
+	width: rem($chexbox-size);
+	height: rem($chexbox-size);
+	position: relative;
+	display: block;
+	outline: none;
+	visibility: hidden;
+	cursor: pointer;
+	&:before{
+		content: '';
+		display: block;
+		@include center();
+		width: rem($chexbox-size);
+		height: rem($chexbox-size);
+		background-color: $colorLight;
+		border: 1px solid $colorButton;
+		visibility: visible;
+	}
+	&:after{
+		content:'';
+		display: block;
+		@include center();
+		background-image: url("../img/mark.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		z-index: 100;
+		width: rem(22px);
+		height: rem(16px);
+		visibility: hidden;
+	}
+	&:checked{
+		&:after{
+			visibility: visible;
+		}
+	}
+	&:active{
+		&:before{
+			background-color: lighten(desaturate(adjust-hue($colorMain, 4.8000), 1.5873), 37.6471);
+		}
+	}
+}

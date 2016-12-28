@@ -38,6 +38,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "flexibility": "^2.0.1",
     "flickity": "^2.0.5"
   }
 }

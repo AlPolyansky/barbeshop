@@ -24,6 +24,7 @@
 @import 'modules/_recall.scss';
 @import 'modules/_slider.scss';
 
+
 // blocks
 
 @import 'blocks/_header.scss';
@@ -32,4 +33,12 @@
 @import 'blocks/_s-info.scss';
 @import 'blocks/_s-news.scss';
 @import 'blocks/_s-recall.scss';
+@import 'blocks/_s-form.scss';
 
+
+// form
+
+@import 'modules/form/_field.scss';
+@import 'modules/form/_radio.scss';
+@import 'modules/form/_checkbox.scss';
+@import 'modules/form/_form.scss';

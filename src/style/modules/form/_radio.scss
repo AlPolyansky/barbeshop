@@ -1,0 +1,44 @@
+$radio-size : 50px; 
+
+.radio{
+	display: block;
+	position: relative;
+	height: rem($radio-size);
+	width: rem($radio-size);
+	visibility: hidden;
+	&:before{
+		display: block;
+		content: '';
+		background-color: $colorLight;
+		height: rem($radio-size);
+		width: rem($radio-size);
+		border-radius: 50%;
+		@include center();
+		cursor: pointer;
+		border: 1px solid $colorButton;
+		visibility: visible;
+		transition: background-color .1s;
+	}
+	&:after{
+		display: block;
+		content: '';
+		width: rem(18px);
+		height: rem(18px);
+		border: 1px solid $colorButton;
+		@include center();
+		border-radius: 50%;
+		visibility: hidden;
+		background-color: $colorLight;
+	}
+	@include line();
+	&:checked{
+		&:after{
+			visibility: visible;
+		}
+	}
+	&:active{
+		&:before{
+			background-color: lighten(desaturate(adjust-hue($colorMain, 4.8000), 1.5873), 37.6471);
+		}
+	}
+}

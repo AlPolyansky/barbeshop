@@ -1,0 +1,15 @@
+.field{
+	outline: none;
+	display: block;
+	padding: rem(26px);
+	border: 1px solid $colorButton;
+	width: 100%;
+	&::placeholder{
+		color:$colorBase;
+	}
+}
+
+.fields--textarea{
+	min-height: rem(211px);
+	resize: none;
+}

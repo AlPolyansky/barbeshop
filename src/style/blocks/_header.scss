@@ -1,11 +1,11 @@
 .header{
 	width: 100%;
-	height: rem(720px);
+	height: rem(380px);
 	background-image: url("../img/bg.jpg");
-	background-size: cover;
-	background-position: center center;
+	background-size: auto 720px;
+	background-position: center top;
 	background-repeat: no-repeat;
-	//overflow: hidden;
+	position: relative;
 	position: relative;
 	&__top-line{
 		background-color: $colorBase;
@@ -15,7 +15,7 @@
 		@include col(12);
 	}
 	&__login{
-		//@include col(2);
+
 	}
 	&__container{
 		position: relative;
@@ -27,6 +27,10 @@
 		.logo{
 			margin: 0 auto;
 		}
+	}
+	&__svg{
+		position: absolute;
+		bottom: 0;
 	}
 }
 
@@ -46,6 +50,15 @@
 	}
 }
 
+
+#welcome-page{
+	.header{
+		height: rem(720px);
+	}
+	.header__svg{
+		display: none;
+	}
+}
 
 
 
@@ -110,8 +123,13 @@
 }
 
 @include apply-to($phone,max){
+	#welcome-page{
+		.header{
+			height: auto;
+		}
+	}
 	.header{
-		height: auto;
+		
 		background-image: none;
 		background-color: $colorDark;
 		padding-top: rem(29px);

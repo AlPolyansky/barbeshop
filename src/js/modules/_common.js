@@ -50,6 +50,7 @@ var commonModule = (function() {
 
 
 			textCutter();
+			svg4everybody();
 			
 			
 

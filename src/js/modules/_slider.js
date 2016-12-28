@@ -11,7 +11,7 @@ var sliderModule = (function() {
   			//contain: true,
   			adaptiveHeight: true,
   			prevNextButtons: false,
-  			autoPlay: true
+  			autoPlay: 7000,
   			//groupCells: true
 			})
 		}
@@ -30,7 +30,7 @@ var sliderModule = (function() {
   			adaptiveHeight: true,
   			prevNextButtons: true,
   			//setGallerySize: false
-  			//autoPlay: true
+  			autoPlay: 7000,
   			//groupCells: true
 			})
 		

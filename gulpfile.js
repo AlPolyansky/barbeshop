@@ -106,7 +106,8 @@ var jsLibs = [
   // Пример:  path.sourse.folder + '/jquery/dist/jquery.js',
   path.sourse.libs + '/jquery/dist/jquery.min.js',
   path.sourse.libs + '/svg4everybody/dist/svg4everybody.js',
-  'node_modules/flickity/dist/flickity.pkgd.min.js'
+  'node_modules/flickity/dist/flickity.pkgd.min.js',
+  'node_modules/flexibility/flexibility.js'
 ];
 
 

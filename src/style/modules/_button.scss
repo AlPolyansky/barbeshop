@@ -16,3 +16,16 @@
 		color: rgba($colorBase,.3);
 	}
 }
+
+.button--form{
+	color: $colorLight;
+	background-color: $colorMain;
+	font-weight: 700;
+	border: 0;
+	cursor: pointer;
+	font-size: rem(24px);
+	padding: em(14px) 0;
+	outline: none;
+	width: 100%;
+	font-family: $fontMain;
+}

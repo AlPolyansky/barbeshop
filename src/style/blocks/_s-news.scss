@@ -13,8 +13,6 @@
 	}
 	&__title{
 		margin-bottom: em(20px);
-		max-width: 70%;
-		width: 100%;
 		margin-left: rem(70px);
 		@include apply-to($tablet,max){
 			margin-left: 0px;
@@ -26,9 +24,6 @@
 		}
 	}
 	&__button{
-		top: 0;
-		right: 0;
-		position: absolute;
 		@include apply-to($phone,max){
 			top: auto;
 			bottom: 0;

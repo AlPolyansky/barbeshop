@@ -1,3 +1,11 @@
 .section{
-	//background-color: darken(saturate(adjust-hue($colorLight, 30.0000), 30.0000), 3.9216);
+	&__title{
+		max-width: 70%;
+		width: 100%;
+	}
+	&__button{
+		top: 0;
+		right: 0;
+		position: absolute;
+	}
 }

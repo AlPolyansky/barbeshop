@@ -1,0 +1,155 @@
+.form{
+	text-align: center;
+	&__title-wrap{
+		display: block;
+		position: relative;
+		width: 100%;
+		&:before{
+			content: '';
+			display: block;
+			height: 1px;
+			position: absolute;
+			top: 50%;
+			background-color: $colorButton;
+			width: 100%;
+		}
+	}
+	&__title{
+		font-size: rem(30px);
+		text-align: center;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin: 0;
+	}
+}
+
+
+
+
+.form--signup{
+	.form__fields{
+		padding-bottom: rem(36px);
+	}
+	.form__row{
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: rem(33px);
+	}
+	.form__field-wrap{
+		flex-grow: 1;
+		margin-right: rem(37px);
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+.form--signup{
+	.form__radios{
+		padding-bottom: rem(55px);
+	}
+	.form__radios-cotainer{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.form__title-wrap{
+		margin-bottom: rem(50px);
+
+	}
+	.form__radio-col{
+		width: calc(100% / 5);
+		vertical-align: top;
+		text-align: center;
+		&:nth-child(5n+1){
+			padding-right: 32px;
+		}
+		&:nth-child(5n+2){
+			padding-right: 15px;
+		}
+		&:nth-child(5n+4){
+			padding-left: 15px;
+		}
+		&:nth-child(5n+5){
+			padding-left: 32px;
+		}
+
+	}
+	.form__radio-wrap{
+		display: inline-block;
+		position: relative;
+	}
+	.form__radios-title{
+		background-color: $colorBody;
+		display: inline-block;
+		position: relative;
+		padding: 0 rem(39px);
+		max-width: 70%;
+	}
+	.radio{
+		margin: 0 auto rem(24px);
+
+			
+	}
+	.form__radio-text{
+		font-weight: 400;
+		font-size: rem(24px);
+		margin-bottom: rem(33px);
+	}
+	.form__radio-svg{
+		height: rem(104px);
+		display: block;
+		margin: 0 auto;
+		fill: $colorMain;
+	}
+}
+
+.form--signup{
+	.form__checkbox{
+		@include clear();
+		margin-bottom: rem(36px);
+	}
+	.checkbox{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: rem(22px);
+	}
+	.form__checkbox-title-wrap{
+		margin-bottom: rem(67px);
+	}
+	.form__checkbox-col{
+		@include col(4);
+		text-align: left;
+		margin-bottom: rem(47px);
+	}
+	.form__checkbox-label{
+		color: $colorBase;
+		display: inline-block;
+		vertical-align: middle;
+		font-size: rem(24px);
+		cursor: pointer;
+	}
+}
+
+.form--signup{
+	.form__button{
+		margin-bottom: rem(87px);
+	}
+}
+
+
+.ico-beard-1{
+	max-width: 52px;
+}
+.ico-beard-2{
+	max-width: 68px;
+}
+.ico-beard-3{
+	max-width: 81px;
+}
+.ico-beard-4{
+	max-width: 99px;
+}
+.ico-beard-5{
+	max-width: 104px;
+}
