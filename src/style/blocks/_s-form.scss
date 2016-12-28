@@ -1,13 +1,35 @@
 .s-form{
 	padding-top: rem(53px);
+	position: relative;
+	@include apply-to($phone,max){
+		padding-top: rem(26px);
+		text-align: center;
+	}
 	&__title{
 		margin-bottom: rem(69px);
 		@include apply-to($tablet,max){
 			margin-bottom: rem(71px);
 		}
+		@include apply-to($phone,max){
+			margin-bottom: rem(27px);
+			max-width: 100%;
+		}
 	}
 	&__button{
 		padding-right: rem(35px);
 		padding-left: rem(36px);
+		@include apply-to($phone,max){
+			display: none;
+		}
+	}
+	&__triangle{
+		@include apply-to($phone,max){
+			display: block;
+			height: rem(34px);
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			fill: lighten(saturate(adjust-hue($colorDark, 0.0000), 0.0000), 1.9608);
+		}
 	}
 }

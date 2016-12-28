@@ -28,4 +28,7 @@
 	outline: none;
 	width: 100%;
 	font-family: $fontMain;
+	@include apply-to($phone,max){
+		font-size: rem(18px);
+	}
 }

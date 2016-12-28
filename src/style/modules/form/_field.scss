@@ -9,9 +9,16 @@
 	&::placeholder{
 		color:$colorBase;
 	}
+	@include apply-to($phone,max){
+		font-size: rem(18px);
+		padding: rem(15px);
+	}
 }
 
 .fields--textarea{
 	min-height: rem(211px);
 	resize: none;
+	@include apply-to($phone,max){
+		min-height: rem(115px);
+	}
 }
