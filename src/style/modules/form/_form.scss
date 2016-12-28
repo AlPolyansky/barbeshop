@@ -29,16 +29,34 @@
 .form--signup{
 	.form__fields{
 		padding-bottom: rem(36px);
+		@include apply-to($tablet,max){
+			padding-bottom: rem(18px);
+		}
 	}
 	.form__row{
 		display: flex;
 		flex-wrap: wrap;
-		margin-bottom: rem(33px);
+		margin-bottom: rem(34px);
+		@include apply-to($tablet,max){
+			&:nth-child(1){
+				flex-wrap: nowrap;
+			}
+			&:nth-child(2){
+				margin-bottom: 0;
+				.form__field-wrap{
+					width: 100%;
+					margin-bottom: rem(34px);
+				}
+			}
+		}
 	}
 	.form__field-wrap{
 		flex-grow: 1;
 		margin-right: rem(37px);
 		&:last-child{
+			margin-right: 0;
+		}
+		@include apply-to($tablet,max){
 			margin-right: 0;
 		}
 	}
@@ -55,6 +73,9 @@
 
 	.form__title-wrap{
 		margin-bottom: rem(50px);
+		@include apply-to($tablet,max){
+			margin-bottom: rem(45px);
+		}
 
 	}
 	.form__radio-col{
@@ -62,18 +83,22 @@
 		vertical-align: top;
 		text-align: center;
 		&:nth-child(5n+1){
-			padding-right: 32px;
+			padding-right: rem(32px);
 		}
 		&:nth-child(5n+2){
-			padding-right: 15px;
+			padding-right: rem(15px);
 		}
 		&:nth-child(5n+4){
-			padding-left: 15px;
+			padding-left: rem(15px);
 		}
 		&:nth-child(5n+5){
-			padding-left: 32px;
+			padding-left: rem(32px);
 		}
-
+		@include apply-to($tablet,max){
+			&:nth-child(5n+5){
+				padding-left: rem(27px);
+			}
+		}
 	}
 	.form__radio-wrap{
 		display: inline-block;
@@ -108,6 +133,9 @@
 	.form__checkbox{
 		@include clear();
 		margin-bottom: rem(36px);
+		@include apply-to($tablet,max){
+			margin-bottom: rem(15px);
+		}
 	}
 	.checkbox{
 		display: inline-block;
@@ -116,11 +144,17 @@
 	}
 	.form__checkbox-title-wrap{
 		margin-bottom: rem(67px);
+		@include apply-to($tablet,max){
+			margin-bottom: rem(67px);
+		}
 	}
 	.form__checkbox-col{
 		@include col(4);
 		text-align: left;
 		margin-bottom: rem(47px);
+		@include apply-to($tablet,max){
+			@include col(6);
+		}
 	}
 	.form__checkbox-label{
 		color: $colorBase;
@@ -134,10 +168,15 @@
 .form--signup{
 	.form__button{
 		margin-bottom: rem(87px);
+		@include apply-to($tablet,max){
+			margin-bottom: rem(77px);
+		}
 	}
 }
 
 
+
+// ico
 .ico-beard-1{
 	max-width: 52px;
 }

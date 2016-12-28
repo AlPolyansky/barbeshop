@@ -67,9 +67,13 @@
 
 //=======================  width < 1200px =======================
 @include apply-to($tablet,max){
-
+	#welcome-page{
+		.header{
+			height: rem(470px);
+		}
+	}
 	.header{
-		height: rem(470px);
+		height: rem(285px);
 	}
 
 	// nav
@@ -129,7 +133,7 @@
 		}
 	}
 	.header{
-		
+		height: auto;
 		background-image: none;
 		background-color: $colorDark;
 		padding-top: rem(29px);
