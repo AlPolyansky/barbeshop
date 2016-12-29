@@ -26,6 +26,12 @@
 	}
 }
 
+#jobs-page{
+	.footer{
+		padding-top: rem(53px);
+	}
+}
+
 
 @include apply-to($tablet,max){
 	.footer{

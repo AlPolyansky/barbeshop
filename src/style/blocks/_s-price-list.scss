@@ -1,0 +1,9 @@
+.s-price-list{
+	background-color: $colorDark;
+	padding-top: rem(75px);
+	padding-bottom: rem(78px);
+	&__title{
+		color: $colorLight;
+		margin-bottom: rem(45px);
+	}
+}

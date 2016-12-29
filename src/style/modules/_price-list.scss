@@ -1,0 +1,38 @@
+.price-list{
+	color: $colorLight;
+	font-size: rem(20px);
+	float: left;
+
+	&__table{
+		display: table;
+		
+		//width: rem(630px);
+		border-collapse:collapse;
+	}
+	&__row{
+		display: table-row;
+	}
+	&__cell{
+		display: table-cell;
+		border: 1px solid lighten(saturate(adjust-hue($colorDark, 0.0000), 0.0000), 14.9020);
+		padding: rem(16px) 0;
+	}
+	&__number{
+		color: rgba($colorLight,.3);
+		padding-left: rem(31px);
+		padding-right: rem(30px);
+	}
+	&__service{
+		font-weight: 700;
+		padding-left: rem(20px);
+		padding-right: rem(41px);
+	}
+	&__service-extra{
+		padding-left: rem(19px);
+		padding-right: rem(19px);
+	}
+	&__price{
+		padding-left: rem(23px);
+		padding-right: rem(57px);
+	}
+}

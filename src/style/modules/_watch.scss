@@ -1,0 +1,19 @@
+.watch{
+	float: right;
+	text-align: center;
+	height: rem(275px);
+	border: 1px solid lighten(saturate(adjust-hue($colorDark, 0.0000), 0.0000), 14.9020);
+	padding: rem(30px) rem(63px) rem(23px);
+	color: $colorLight;
+	font-size: rem(20px);
+	min-height: rem(281px);
+	&__svg{
+		fill: $colorLight;
+		margin-bottom: rem(30px);
+	}
+}
+
+.i-clock{
+	height: rem(138px);
+	width: rem(138px);
+}

@@ -1,5 +1,6 @@
 .s-jobs{
 	padding-top: rem(53px);
+	padding-bottom: rem(42px);
 	@include apply-to($phone,max){
 		padding-top: rem(26px);
 	}
