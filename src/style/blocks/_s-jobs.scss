@@ -1,0 +1,22 @@
+.s-jobs{
+	padding-top: rem(53px);
+	@include apply-to($phone,max){
+		padding-top: rem(26px);
+	}
+	&__title{
+		margin-bottom: rem(84px);
+		@include apply-to($tablet,max){
+			margin-bottom: rem(43px)
+		}
+		@include apply-to($phone,max){
+			text-align: center;
+			max-width: 100%;
+			margin-bottom: rem(28px);
+		}
+	}
+	&__button{
+		@include apply-to($phone,max){
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.icon{
+	&__wrap{
+
+	}
+	&__item{
+		display: inline-block;
+		height: 20px;
+		margin-right: rem(34px);
+		margin-bottom: rem(20px);
+		text-transform: uppercase;
+	}
+	&__svg{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: rem(13px);
+	}
+	&__text{
+		display: inline-block;
+		vertical-align: middle;
+	}
+}

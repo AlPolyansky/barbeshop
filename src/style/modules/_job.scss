@@ -1,0 +1,239 @@
+
+.jobs{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.job{
+	display: flex;
+	order: 2;
+	position: relative;
+	max-width: 295px;
+	width: 100%;
+	margin-bottom: rem(40px);
+	@include apply-to($tablet,max){
+		max-width: 100%;
+	}
+	@include apply-to($phone,max){
+		display: block;
+		margin-bottom: rem(20px);
+	}
+	&__container{
+		@include clear();
+		border: 1px solid $colorButton;
+		display: flex;
+		flex-direction: column;
+		padding-bottom: rem(20px);
+		@include apply-to($tablet,max){
+			display: block;
+			width: 100%;
+			padding-bottom: 0;
+		}
+	}
+	&__part{
+		position: relative;
+		height: 100%;
+		&:first-child{
+			min-height: rem(295px);
+			overflow: hidden;
+		}
+		@include apply-to($tablet,max){
+			@include col(6);
+			&:first-child{
+				width: rem(271px);
+			}
+		}
+		@include apply-to($phone,max){
+			display: block;
+			width: 100%;
+			max-width: 100%;
+			&:first-child{
+				width: 100%;
+				min-height: auto;
+			}
+		}
+	}
+	&__img{
+		width: 100%;
+		display: block;
+		max-width: 295px;
+		height: 100%;
+		background-size: cover;
+		@include apply-to($phone,max){
+			min-height: rem(176px);			
+		}
+	}
+	&__wrap{
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		max-width: 295px;
+	}
+	&__content{
+		height: 100%;
+		padding: rem(29px) rem(34px) rem(31px);
+		@include apply-to($tablet,max){
+			padding: rem(39px) rem(10px) rem(31px) rem(47px);
+		}
+		@include apply-to($phone,max){
+			padding: rem(23px) rem(10px) rem(22px) rem(22px);
+		}
+	}
+	&__title{
+		font-size: rem(24px);
+		font-weight: 700;
+		margin-bottom: rem(27px);
+		@include apply-to($phone,max){
+			margin-bottom: rem(15px);
+		}
+	}
+	&__text{
+		font-size: rem(18px);
+		line-height: em(23px);
+		margin: 0;
+	}
+	&__icons{
+		width: 100%;
+		padding-left: rem(34px);
+		@include apply-to($tablet,max){
+			padding-left: rem(48px);
+			padding-bottom: rem(27px);
+		}
+		@include apply-to($tablet,max){
+			padding-left: rem(22px);
+			padding-bottom: rem(12px);
+		}
+		svg{
+			fill: $colorMain;
+		}
+	}
+	.sticker{
+		display: none;
+	}
+}
+
+
+
+
+
+.job--best{
+	order: 1;
+	@include col(12);
+	.job__container{
+		display: flex;
+		width: 100%;
+		padding-bottom: 0;
+		flex-direction: row;
+		min-height: rem(480px);
+		@include apply-to($phone,max){
+			display: block;
+		}
+	}
+	.job__part{
+		width: 50%;
+		vertical-align: top;
+		&:first-child{
+			max-height: 100%;
+			overflow: visible;
+		}
+		@include apply-to($phone,max){
+			width: 100%;
+		}
+	}
+	.job__wrap{
+		max-width: 100%;
+	}
+	.job__img{
+		max-width: 100%;
+		@include apply-to($tablet,max){
+			background-position: right;
+			width: rem(271px);
+		}
+		@include apply-to($tablet,max){
+			width: 100%;
+		}
+		@include apply-to($phone,max){
+			min-height: rem(480px);			
+		}
+	}
+	.job__content{
+		padding: rem(129px) rem(138px) 0 rem(42px);
+		margin-bottom: rem(60px);
+		@include apply-to($tablet,max){
+			padding: rem(44px) rem(50px) 0 0;
+		}
+		@include apply-to($phone,max){
+			padding: rem(18px) rem(28px) 0 rem(22px);
+			margin-bottom: rem(24px);
+		}
+	}
+	.sticker{
+		display: block;
+		top: rem(25px);
+		position: absolute;
+		right: 0;
+		@include apply-to($tablet,max){
+			right: auto;
+			left: 0;
+			top: rem(35px);
+			z-index: 100;
+		}
+		@include apply-to($phone,max){
+			top: rem(401px);
+		}
+	}
+	.job__icons{
+		padding-left: rem(42px);
+		@include apply-to($tablet,max){
+			padding-left: 0;
+			padding-bottom: rem(20px);
+		}
+		@include apply-to($phone,max){
+			padding-left: rem(18px);
+			padding-bottom: rem(3px);
+		}
+	}
+}
+
+
+// icon
+
+.i-shears-2{
+	width: 21px;
+	height: 24px;
+}
+
+.i-beard-small{
+	width: 23px;
+	height: 21px;
+}
+
+.i-mustache{
+	width: 45px;
+	height: 13px;
+}
+
+
+
+.no-flexboxlegacy{
+	.job__wrap{
+		height: auto;
+	}
+	.icon{
+		position: absolute;
+		bottom: 0;
+	}
+	.job__part{
+		height: auto;
+		position: static;
+	}
+	.job__container{
+		display: block;
+	}
+	.job--best{
+		.job__part{
+			@include col(6);
+		}
+	}
+}

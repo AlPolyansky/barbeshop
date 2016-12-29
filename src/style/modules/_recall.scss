@@ -33,7 +33,7 @@
 	}
 	&__description{
 		@include col(9);
-		padding: rem(30px) rem(70px) 0 rem(70px);
+		padding: rem(30px) rem(70px) rem(20px) rem(70px);
 		max-width: calc(100% - #{rem(247px)});
 		font-size: rem(18px);
 		@include apply-to($tablet,max){

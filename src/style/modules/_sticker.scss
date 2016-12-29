@@ -1,0 +1,40 @@
+.sticker{
+	background-color: $colorMain;
+	text-transform: uppercase;
+	color: $colorLight;
+	font-weight: 700;
+	font-size: rem(20px);
+	display: inline-block;
+	padding: 	em(11px) em(16px) em(11px) em(19px);
+	position: relative;
+	&:after,&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: -8px;
+		border-left: 8px solid transparent;
+	}
+	&:after{
+		border-bottom: 26px solid $colorMain; 
+		bottom: 0;
+	}
+	&:before{
+		top: 0;
+		border-top: 26px solid $colorMain; 
+	}
+	@include apply-to($tablet,max){
+		padding-left: em(14px);
+		padding-right: em(20px);
+		&:after,&:before{
+			left: auto;
+			right: -8px;
+			border-right: 8px solid transparent;
+		}
+	}
+	@include apply-to($tablet,max){
+		padding-left: em(21px);
+		padding-right: em(15px);
+	}
+}

@@ -28,6 +28,25 @@ var commonModule = (function() {
 			
 		}
 
+		var jobsHeight = function(){
+			var job = $('.job');
+			var content = job.find('.job__content');
+			
+			
+
+			//content.height(part.height() - icons.height())
+			$.each(content,function(){
+				var $this = $(this);
+				var part = $this.closest('.job__part');
+				var icons = part.find('.job__icons');
+
+
+				/*$this.css({
+					'height' : part.outerHeight() - icons.outerHeight()
+				})*/
+			})
+		}
+
 
 		var _setUpListener = function(){
 
@@ -51,6 +70,7 @@ var commonModule = (function() {
 
 			textCutter();
 			svg4everybody();
+			jobsHeight();
 			
 			
 

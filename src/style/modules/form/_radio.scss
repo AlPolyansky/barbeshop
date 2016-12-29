@@ -5,7 +5,8 @@ $radio-size : 50px;
 	position: relative;
 	height: rem($radio-size);
 	width: rem($radio-size);
-	visibility: hidden;
+	//visibility: hidden;
+	outline: none;
 	&:before{
 		display: block;
 		content: '';
@@ -30,7 +31,6 @@ $radio-size : 50px;
 		visibility: hidden;
 		background-color: $colorLight;
 	}
-	@include line();
 	&:checked{
 		&:after{
 			visibility: visible;

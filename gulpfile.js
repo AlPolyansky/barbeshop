@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
-//var autoprefixer = require('gulp-autoprefixer');
+var autoprefixer = require('gulp-autoprefixer');
 var del = require('del');
 var concat = require('gulp-concat');
 var csso = require('gulp-csso');
@@ -21,7 +21,7 @@ var flexbugs = require('postcss-flexbugs-fixes');
 var mqpacker = require("css-mqpacker");
 
 var proccessors = [
-  cssnext(),
+  //cssnext(),
   flexbugs(),
   mqpacker()
 ]
@@ -107,7 +107,7 @@ var jsLibs = [
   path.sourse.libs + '/jquery/dist/jquery.min.js',
   path.sourse.libs + '/svg4everybody/dist/svg4everybody.js',
   'node_modules/flickity/dist/flickity.pkgd.min.js',
-  'node_modules/flexibility/flexibility.js'
+  'node_modules/flexibility/flexibility.js',
 ];
 
 
@@ -170,7 +170,7 @@ gulp.task('sass', function () {
   return gulp.src(sassCompile)
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'expanded', errLogToConsole: true})).on('error', notify.onError({title: 'Style'}))
-    //.pipe(autoprefixer(['last 15 versions'], {cascade: true}))
+    .pipe(autoprefixer(['last 15 versions'], {cascade: true}))
     .pipe(postcss(proccessors))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(path.build.folder + '/' + path.build.css + '/'))

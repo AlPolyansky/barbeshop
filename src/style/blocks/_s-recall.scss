@@ -7,10 +7,6 @@
 	}
 	@include apply-to($phone,max){
 		padding-top: rem(24px);
-		//padding-bottom: rem(72px);
-	}
-	&__container{
-		position: relative;
 	}
 	&__button{
 		padding-left: em(21px);
