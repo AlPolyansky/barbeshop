@@ -29,7 +29,11 @@
 #jobs-page{
 	.footer{
 		padding-top: rem(53px);
+		@include apply-to($phone,max){
+			padding-top: rem(37px);
+		}
 	}
+
 }
 
 

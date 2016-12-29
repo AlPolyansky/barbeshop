@@ -4,14 +4,14 @@
   @if ($pos==center) {
 	   @extend %pos-center;
 
-  } @else if ($pos==top) {
+  } @else if ($pos=='top') {
 	   @extend %pos-top;
 
-  } @else if ($pos==left) {
+  } @else if ($pos=='left') {
 	   @extend %pos-left;
-  } @else if ($pos==right) {
+  } @else if ($pos=='right') {
 	   @extend %pos-right;
-  } @else if ($pos==bottom) {
+  } @else if ($pos=='bottom') {
 	   @extend %pos-bottom;
   } @else if($pos==none){
 

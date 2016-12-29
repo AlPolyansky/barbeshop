@@ -2,8 +2,36 @@
 	background-color: $colorDark;
 	padding-top: rem(75px);
 	padding-bottom: rem(78px);
+	position: relative;
 	&__title{
 		color: $colorLight;
 		margin-bottom: rem(45px);
+	}
+	&__triangle{
+		display: none;
+	}
+}
+
+@include apply-to($tablet,max){
+	.s-price-list{
+		padding-top: rem(39px);
+		padding-bottom: rem(55px);
+	}
+}
+
+@include apply-to($phone,max){
+	.s-price-list{
+		padding-top: rem(33px);
+		padding-bottom: rem(54px);
+		text-align: center;
+		&__title{
+			max-width: 100%;
+			margin-bottom: rem(7px);
+		}
+		&__triangle{
+			display: block;
+			height: rem(36px);
+			fill: lighten(saturate(adjust-hue($colorDark, 0.0000), 0.0000), 1.9608);
+		}
 	}
 }

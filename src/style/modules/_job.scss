@@ -100,8 +100,8 @@
 			padding-left: rem(48px);
 			padding-bottom: rem(27px);
 		}
-		@include apply-to($tablet,max){
-			padding-left: rem(22px);
+		@include apply-to($phone,max){
+			padding-left: rem(23px);
 			padding-bottom: rem(12px);
 		}
 		svg{
@@ -149,9 +149,6 @@
 		@include apply-to($tablet,max){
 			background-position: right;
 			width: rem(271px);
-		}
-		@include apply-to($tablet,max){
-			width: 100%;
 		}
 		@include apply-to($phone,max){
 			min-height: rem(480px);			

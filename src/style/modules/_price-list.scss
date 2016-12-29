@@ -2,11 +2,14 @@
 	color: $colorLight;
 	font-size: rem(20px);
 	float: left;
+	@include apply-to($tablet,max){
+		width: 100%;
+		float: none;
+		margin-bottom: rem(9px);
+	}
 
 	&__table{
 		display: table;
-		
-		//width: rem(630px);
 		border-collapse:collapse;
 	}
 	&__row{
@@ -27,6 +30,9 @@
 		padding-left: rem(20px);
 		padding-right: rem(41px);
 	}
+	&__extra-m{
+		display: none;
+	}
 	&__service-extra{
 		padding-left: rem(19px);
 		padding-right: rem(19px);
@@ -34,5 +40,35 @@
 	&__price{
 		padding-left: rem(23px);
 		padding-right: rem(57px);
+	}
+}
+
+@include apply-to($phone,max){
+	.price-list{
+		&__table{
+			width: 100%;
+			margin-bottom: rem(23px);
+		}
+		&__cell{
+			border: none;
+			padding-bottom: rem(8px);
+			&:nth-child(1),&:nth-child(3){
+				display: none;
+			}
+		}
+		&__service{
+			text-align: left;
+			padding: 0;
+		}
+		&__extra-m{
+			display: block;
+			text-align: left;
+			font-weight: 400;
+			//padding-bottom: rem20px;
+		}
+		&__price{
+			text-align: right;
+			padding: 0;
+		}
 	}
 }

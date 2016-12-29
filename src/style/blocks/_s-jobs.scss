@@ -1,8 +1,13 @@
 .s-jobs{
 	padding-top: rem(53px);
 	padding-bottom: rem(42px);
+	position: relative;
+	@include apply-to($tablet,max){
+		padding-bottom: rem(62px);
+	}
 	@include apply-to($phone,max){
 		padding-top: rem(26px);
+		padding-bottom: rem(45px);
 	}
 	&__title{
 		margin-bottom: rem(84px);
@@ -18,6 +23,16 @@
 	&__button{
 		@include apply-to($phone,max){
 			display: none;
+		}
+	}
+	&__triangle{
+		display: none;
+		@include apply-to($tablet,max){
+			display: block;
+			height: rem(43px);
+		}
+		@include apply-to($phone,max){
+			height: rem(34px);
 		}
 	}
 }
